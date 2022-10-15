@@ -1,0 +1,9 @@
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.check_box :completed %>
+  <%= f.label :completed, "Task Done" %>
+  <%= f.submit @task.new_record? ? 'Create Task' : 'Update Task', class: "btn btn-default" %>
+<% end %>
